@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="175.0" layoutY="29.0" text="Agregar persona a la base de datos">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="90.0" text="Nombre:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="129.0" text="Apellido:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="172.0" text="Genero:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="213.0" text="Fecha de nacimiento:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="416.0" layoutY="81.0" text="Foto">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="103.0" layoutY="86.0" />
+      <TextField layoutX="103.0" layoutY="127.0" />
+      <RadioButton layoutX="103.0" layoutY="173.0" mnemonicParsing="false" text="Masculino" />
+      <RadioButton layoutX="192.0" layoutY="173.0" mnemonicParsing="false" text="Femenino" />
+      <DatePicker layoutX="47.0" layoutY="245.0" />
+   </children>
+</AnchorPane>
