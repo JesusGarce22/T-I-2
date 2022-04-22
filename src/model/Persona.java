@@ -9,6 +9,7 @@ public class Persona<T> {
 	private T photo;
 	private T code;
 	
+	
 	public Persona(T name, T lastName, T birthDay, T year, T photo, T code) {
 		this.name = name;
 		this.lastName = lastName;

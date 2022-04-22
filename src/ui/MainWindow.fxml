@@ -14,11 +14,12 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <TextField layoutX="36.0" layoutY="81.0" prefHeight="25.0" prefWidth="422.0" />
-      <Button layoutX="482.0" layoutY="81.0" mnemonicParsing="false" text="Buscar" />
-      <ListView layoutX="34.0" layoutY="135.0" prefHeight="175.0" prefWidth="422.0" />
-      <Button layoutX="34.0" layoutY="332.0" mnemonicParsing="false" text="Agregar persona" />
-      <Button layoutX="487.0" layoutY="135.0" mnemonicParsing="false" text="Editar " />
-      <Button layoutX="483.0" layoutY="175.0" mnemonicParsing="false" text="Eliminar" />
+      <TextField fx:id="tfSearch" layoutX="36.0" layoutY="81.0" prefHeight="25.0" prefWidth="422.0" />
+      <Button fx:id="btnSearch" layoutX="482.0" layoutY="81.0" mnemonicParsing="false" text="Buscar" />
+      <ListView fx:id="listUsers" layoutX="34.0" layoutY="135.0" prefHeight="175.0" prefWidth="422.0" />
+      <Button fx:id="btnAdd" layoutX="34.0" layoutY="332.0" mnemonicParsing="false" text="Agregar persona" />
+      <Button fx:id="btnEdit" layoutX="487.0" layoutY="135.0" mnemonicParsing="false" text="Editar " />
+      <Button fx:id="btnDelete" layoutX="483.0" layoutY="175.0" mnemonicParsing="false" text="Eliminar" />
+      <Button fx:id="btnAuto" layoutX="171.0" layoutY="332.0" mnemonicParsing="false" text="Generar automaticamente" />
    </children>
 </AnchorPane>

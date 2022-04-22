@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
@@ -9,7 +10,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="227.0" layoutY="40.0" text="Editar informacion">
@@ -17,39 +17,53 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="66.0" layoutY="95.0" text="Cambiar nombre:">
+      <Label layoutX="31.0" layoutY="83.0" text="Cambiar nombre:">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="180.0" layoutY="93.0" />
-      <Label layoutX="66.0" layoutY="142.0" text="Cambiar apellido:">
+      <TextField fx:id="tfChName" layoutX="153.0" layoutY="81.0" AnchorPane.rightAnchor="298.0" />
+      <Label layoutX="31.0" layoutY="118.0" text="Cambiar apellido:">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="66.0" layoutY="234.0" text="Cambiar fecha de nacimiento:">
+      <Label layoutX="31.0" layoutY="255.0" text="Cambiar fecha de nacimiento:">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="66.0" layoutY="190.0" text="Cambiar genero:">
+      <Label layoutX="33.0" layoutY="190.0" text="Cambiar genero:">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="180.0" layoutY="140.0" />
-      <RadioButton layoutX="174.0" layoutY="192.0" mnemonicParsing="false" text="Masculino" />
-      <RadioButton layoutX="263.0" layoutY="192.0" mnemonicParsing="false" text="Femenino" />
-      <DatePicker layoutX="59.0" layoutY="263.0" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="373.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="tfChLastName" layoutX="153.0" layoutY="116.0" />
+      <RadioButton fx:id="rdbChMale" layoutX="148.0" layoutY="192.0" mnemonicParsing="false" text="Masculino" />
+      <RadioButton fx:id="rdbChFem" layoutX="235.0" layoutY="192.0" mnemonicParsing="false" text="Femenino" />
+      <DatePicker fx:id="dateChBirthday" layoutX="31.0" layoutY="283.0" />
+      <ImageView fx:id="photo" fitHeight="150.0" fitWidth="200.0" layoutX="373.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="64.0" layoutY="321.0" text="Cambiar foto:">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="153.0" layoutY="319.0" />
-      <Button layoutX="321.0" layoutY="319.0" mnemonicParsing="false" text="BROWSE" />
-      <Label layoutX="50.0" layoutY="360.0" text="*Si deja el cambo en blanco conservara la informacion original" />
+      <TextField fx:id="chPathPhoto" layoutX="153.0" layoutY="319.0" />
+      <Button fx:id="btnBrowse" layoutX="321.0" layoutY="319.0" mnemonicParsing="false" text="BROWSE" />
+      <Label layoutX="50.0" layoutY="360.0" text="*Si deja el cambo en blanco conservara la informacion original" AnchorPane.bottomAnchor="23.0" />
+      <Label layoutX="31.0" layoutY="151.0" text="Cambiar estatura:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfChHeight" layoutX="153.0" layoutY="149.0" />
+      <Label layoutX="31.0" layoutY="220.0" text="Cambiar nacionalidad:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="boxChNacionality" layoutX="171.0" layoutY="218.0" prefWidth="150.0" />
+      <Button fx:id="btnCancel" layoutX="511.0" layoutY="348.0" mnemonicParsing="false" text="Cancelar" />
+      <Button fx:id="btnUpload" layoutX="440.0" layoutY="348.0" mnemonicParsing="false" text="Subir" />
    </children>
 </AnchorPane>
