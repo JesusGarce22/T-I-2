@@ -5,16 +5,16 @@ public class Persona<T> {
 	private T name;
 	private T lastName;
 	private T birthDay;
-	private T year;
+	private T country;
 	private T photo;
 	private T code;
 	
 	
-	public Persona(T name, T lastName, T birthDay, T year, T photo, T code) {
+	public Persona(T name, T lastName, T birthDay, T country, T photo, T code) {
 		this.name = name;
 		this.lastName = lastName;
 		this.birthDay = birthDay;
-		this.year = year;
+		this.country = country;
 		this.photo = photo;
 		this.code = code;
 	}
@@ -44,11 +44,11 @@ public class Persona<T> {
 	}
 
 	public T getYear() {
-		return year;
+		return country;
 	}
 
 	public void setYear(T year) {
-		this.year = year;
+		this.country = year;
 	}
 
 	public T getPhoto() {
