@@ -47,7 +47,21 @@ public class GenerateDates extends Stage{
 	private void init() {
 
 		GenerationBotton.setOnAction(event->{
-			generateDates();
+
+			String x=numRandom.getText();
+			int num=Integer.parseInt(x);
+			if(num<=0) {
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setTitle("ERROR");
+				alert.setHeaderText("NUMERO NO VALIDO");
+				alert.setContentText("El numero que ingresaste no es valido, por favor ingresa un numero mayor a 0");
+
+				alert.showAndWait();
+			}else {
+				read=new Leer(num);
+
+				read.start();;
+			}
 
 		});	
 		saveGenerationBotton.setOnAction(event->{
@@ -58,50 +72,5 @@ public class GenerateDates extends Stage{
 		});
 	}
 
-	public static String autoGenerateLastnames(ArrayList<String> lastnames) {
-		int indiceAleatorio = numeroAleatorioEnRango(0, lastnames.size() - 1);
-		String RandomLastname = lastnames.get(indiceAleatorio);
-		return RandomLastname;
-	}
 
-	public static String autoGeneraNames(ArrayList<String> name) {
-		int indiceAleatorio = numeroAleatorioEnRango(0, name.size() - 1);
-		String RandomName = name.get(indiceAleatorio);
-		return RandomName;
-	}
-
-	public static String autoGenerateCountris(ArrayList<String> pais) {
-		int indiceAleatorio = numeroAleatorioEnRango(0, pais.size() - 1);
-		String RandomCountri = pais.get(indiceAleatorio);
-		return RandomCountri;
-	}
-
-	public static int numeroAleatorioEnRango(int minimo, int maximo) {
-		// nextInt regresa en rango pero con límite superior exclusivo, por eso sumamos 1
-		return ThreadLocalRandom.current().nextInt(minimo, maximo + 1);
-	}
-
-	public static void generateDates() {
-		
-		String x=numRandom.getText();
-		int num=Integer.parseInt(x);
-
-		if(num<=0) {
-			Alert alert = new Alert(AlertType.ERROR);
-			alert.setTitle("ERROR");
-			alert.setHeaderText("NUMERO NO VALIDO");
-			alert.setContentText("El numero que ingresaste no es valido, por favor ingresa un numero mayor a 0");
-
-			alert.showAndWait();
-		}else {
-			ArrayList<String> name=read.readNames();
-			ArrayList<String> lastname=read.readLastNames();
-			ArrayList<String> country= read.readCountris();
-			for(int i =0;i<num;i++) {
-				
-				Persona p=new Persona(autoGeneraNames(name), autoGenerateLastnames(lastname), "",autoGenerateCountris(country), "", "");
-				//next
-			}
-		}
-	}
 }
