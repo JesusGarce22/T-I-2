@@ -29,7 +29,7 @@ public class Leer extends Thread{
 		ArrayList<String> name = new ArrayList<>();// Almacena los nombres importados de la base de datos
 		try {
 			//leer archivo .csv
-			File file= new File("D:\\Jesus\\proyectos\\T-I-2\\datasets\\names.csv");
+			File file= new File("datasets\\names.csv");
 
 			FileInputStream fis = new FileInputStream(file);
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -67,7 +67,7 @@ public class Leer extends Thread{
 		ArrayList<String> lastname = new ArrayList<>();// Almacena los apellidos importados de la base de datos
 		try {
 			//leer archivo .csv
-			File file= new File("D:\\Jesus\\proyectos\\T-I-2\\datasets\\apellidos.csv");
+			File file= new File("datasets\\apellidos.csv");
 
 			FileInputStream fis = new FileInputStream(file);
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -104,7 +104,7 @@ public class Leer extends Thread{
 		ArrayList<String> gender = new ArrayList<>();// Almacena los nombres importados de la base de datos
 		try {
 			//leer archivo .csv
-			File file= new File("D:\\Jesus\\proyectos\\T-I-2\\datasets\\names.csv");
+			File file= new File("datasets\\names.csv");
 
 			FileInputStream fis = new FileInputStream(file);
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -143,7 +143,7 @@ public class Leer extends Thread{
 		ArrayList<String> pais = new ArrayList<>();// Almacena los paises importados de la base de datos
 		try {
 			//leer archivo .csv
-			File file= new File("D:\\Jesus\\proyectos\\T-I-2\\datasets\\pais.csv");
+			File file= new File("datasets\\pais.csv");
 
 			FileInputStream fis = new FileInputStream(file);
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
