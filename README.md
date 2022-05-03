@@ -1,1 +1,1 @@
-# T-I-2
+In this project, build a simulation of a database will be built that allows us to efficiently manage CRUD operations (Create, Read, Update and Delete) on a database of people from the American continent that are more or less just over a billion people. persons.
