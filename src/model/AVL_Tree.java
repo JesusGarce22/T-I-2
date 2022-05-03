@@ -163,12 +163,12 @@ public class AVL_Tree<T> {
 
 		// Rotacion doble izquierda derecha
 		if (fe > 1 && getFe(current.getLeft()) < 0) {
-			current.setLeft(leftRotate(current));
+			current.setLeft(leftRotate(current.getLeft()));
 			return rightRotate(current);
 
 		}
 
-		// Rotacion doble izquierda derecha
+		// Rotacion doble derecha izquierda
 		if (fe < -1 && getFe(current.getRight()) > 0) {
 
 			current.setRight(rightRotate(current.getRight()));
