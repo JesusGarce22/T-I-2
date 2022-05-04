@@ -4,6 +4,7 @@ public class Persona<T> {
 	
 	private T name;
 	private T lastName;
+	private T fullName;
 	private T birthDay;
 	private T country;
 	private T photo;
@@ -16,6 +17,7 @@ public class Persona<T> {
 	public Persona(T name, T lastName, T birthDay, T country, T photo, T code,T gender,T age,T heith) {
 		this.name = name;
 		this.lastName = lastName;
+		this.fullName = (T) (name.toString() + lastName.toString());
 		this.birthDay = birthDay;
 		this.country = country;
 		this.photo = photo;
@@ -24,6 +26,32 @@ public class Persona<T> {
 		this.age=age;
 		this.heith=heith;
 	}
+	
+	
+
+	public T getFullName() {
+		return fullName;
+	}
+
+
+
+	public void setFullName(T fullName) {
+		this.fullName = fullName;
+	}
+
+
+
+	public T getCountry() {
+		return country;
+	}
+
+
+
+	public void setCountry(T country) {
+		this.country = country;
+	}
+
+
 
 	public T getName() {
 		return name;
@@ -85,6 +113,7 @@ public class Persona<T> {
 		System.out.print(name+" "+lastName+" "+age+" "+" "+country+" "+birthDay+" "+code+" "+photo+" "+gender+" "+heith+"-- ");
 		System.out.println("_____________________________________________________________________________");
 	}
+	
 
 	public T getAge() {
 		return age;
