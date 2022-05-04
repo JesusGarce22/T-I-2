@@ -9,6 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import ui.GenerateDates;
 import ui.Main;
 
 public class Leer extends Thread{
@@ -300,10 +301,12 @@ public class Leer extends Thread{
 				p.setBirthDay(d);
 				String h=generateHeigth((String) p.getGender());
 				p.setHeith(h);
+			/*se agrega  una persona generada al arbol
+				if(instance!=null) {
+					instance.add((String) p.getCode(),p);
+				}**/
 				
-			//se agrega  una persona generada al arbol
-				instance.add((String) p.getCode(),p);
-				//p.printInfo();
+				p.printInfo();
 				
 				//next
 			}

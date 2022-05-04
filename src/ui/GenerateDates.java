@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
@@ -20,7 +21,9 @@ public class GenerateDates extends Stage{
 	private static Leer read;
 	private  Button saveGenerationBotton;
 	private  Button GenerationBotton;
+	private Label timeGenerate;
 	private static TextField numRandom;
+
 
 	public GenerateDates() {
 
@@ -34,6 +37,7 @@ public class GenerateDates extends Stage{
 			saveGenerationBotton = (Button) loader.getNamespace().get("saveGenerationBotton");
 			GenerationBotton = (Button) loader.getNamespace().get("GenerationBotton");
 			numRandom = (TextField) loader.getNamespace().get("numRandom");
+			timeGenerate = (Label) loader.getNamespace().get("timeGenerate");
 
 			init();
 		} catch (IOException e) {
@@ -61,16 +65,22 @@ public class GenerateDates extends Stage{
 				read=new Leer(num);
 
 				read.start();;
+
+
+
+
 			}
 
 		});	
 		saveGenerationBotton.setOnAction(event->{
-			MainWindow main = new MainWindow();
-			main.show();
-			this.close();
+			if(read.isAlive())
+			{
+				MainWindow main = new MainWindow();
+				main.show();
+				this.close();
+			}		
 
 		});
 	}
-
 
 }
