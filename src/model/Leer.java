@@ -14,6 +14,7 @@ import ui.Main;
 public class Leer extends Thread{
 
 	private int number;
+	public static AVL_Tree instance;
 
 	public Leer(int number) {
 		this.number=number;
@@ -21,6 +22,7 @@ public class Leer extends Thread{
 
 	@Override
 	public void run() {
+		instance=AVL_Tree.getInstance();
 		generateDates(number);
 	}
 
@@ -298,7 +300,10 @@ public class Leer extends Thread{
 				p.setBirthDay(d);
 				String h=generateHeigth((String) p.getGender());
 				p.setHeith(h);
-				p.printInfo();
+				
+			//se agrega  una persona generada al arbol
+				instance.add((String) p.getCode(),p);
+				//p.printInfo();
 				
 				//next
 			}

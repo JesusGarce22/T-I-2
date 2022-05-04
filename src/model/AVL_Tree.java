@@ -5,10 +5,20 @@ import java.util.Comparator;
 
 public class AVL_Tree<T> {
 
+	public static AVL_Tree instance;
 	private Node root;
 
 	private Node n;
 
+	public static AVL_Tree getInstance() {
+		if (instance == null) {
+			instance = new AVL_Tree();
+			;
+		}
+
+		return instance;
+	}
+	
 	public void clearTree() {
 
 		root = null;
