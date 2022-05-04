@@ -22,7 +22,6 @@ public class MainWindow extends Stage {
 	private TextField tfSearch;
 	public static BaseOfDates list;
 	public static AVL_Tree instance;
-	public static PersonList pl;
 
 	private ListView<Persona> listUsers;
 	private Button btnAdd;
@@ -43,8 +42,7 @@ public class MainWindow extends Stage {
 			setScene(scene);
 			
 			instance=AVL_Tree.getInstance();
-			pl=pl.getInstance();
-			list=list.getInstance();
+	
 
 			btnSearch = (Button) loader.getNamespace().get("btnSearch");
 			tfSearch = (TextField) loader.getNamespace().get("tfSearch");
@@ -102,7 +100,7 @@ public class MainWindow extends Stage {
 		});
 
 		showTable.setOnAction(event ->{
-			
+			list=list.getInstance();
 			list.show();
 
 		});
@@ -118,13 +116,10 @@ public class MainWindow extends Stage {
 			
 			if(result.get()== ButtonType.OK) {
 				instance.clearTree();
-				pl.removeList();
-				
+				list.deleteList();
 			}
 		});
 		
-
 	}
-
 
 }

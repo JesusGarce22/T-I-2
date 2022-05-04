@@ -57,7 +57,6 @@ public class PersonList {
 	}*/
 
 	public void add(Persona p) {
-		//Employee yisus = new Employee("Jesus", "123", "3/02/2002", "123");
 		list.add(p);
 	}
 
@@ -70,7 +69,4 @@ public class PersonList {
 		Collections.sort(getList(), comparadorA);
 	}
 	
-	public void removeList() {
-		list.removeAll(list);
-	}
 }

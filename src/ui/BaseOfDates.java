@@ -88,4 +88,10 @@ public class BaseOfDates extends Stage{
 
 		return instance;
 	}
+	
+	public void deleteList() {
+		observableList=null;
+		
+		table.setItems(observableList);
+	}
 }
