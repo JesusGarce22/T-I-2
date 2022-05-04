@@ -69,4 +69,8 @@ public class PersonList {
 		
 		Collections.sort(getList(), comparadorA);
 	}
+	
+	public void removeList() {
+		list.removeAll(list);
+	}
 }

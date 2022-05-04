@@ -1,20 +1,28 @@
 package ui;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.AVL_Tree;
+import model.PersonList;
 import model.Persona;
 
 public class MainWindow extends Stage {
 
 	private TextField tfSearch;
 	public static BaseOfDates list;
+	public static AVL_Tree instance;
+	public static PersonList pl;
 
 	private ListView<Persona> listUsers;
 	private Button btnAdd;
@@ -23,6 +31,7 @@ public class MainWindow extends Stage {
 	private Button btnAuto;
 	private Button btnSearch;
 	private Button showTable;
+	private Button btnDeletaBD;
 
 	public MainWindow() {
 
@@ -32,6 +41,10 @@ public class MainWindow extends Stage {
 
 			Scene scene = new Scene(root, 600, 400);
 			setScene(scene);
+			
+			instance=AVL_Tree.getInstance();
+			pl=pl.getInstance();
+			list=list.getInstance();
 
 			btnSearch = (Button) loader.getNamespace().get("btnSearch");
 			tfSearch = (TextField) loader.getNamespace().get("tfSearch");
@@ -41,7 +54,7 @@ public class MainWindow extends Stage {
 			btnDelete = (Button) loader.getNamespace().get("btnDelete");
 			btnAuto = (Button) loader.getNamespace().get("btnAuto");
 			showTable = (Button) loader.getNamespace().get("showTable");
-
+			btnDeletaBD = (Button) loader.getNamespace().get("btnDeletaBD");
 			init();
 
 
@@ -89,12 +102,27 @@ public class MainWindow extends Stage {
 		});
 
 		showTable.setOnAction(event ->{
-			list=list.getInstance();
+			
 			list.show();
 
 		});
-
-
+		
+		btnDeletaBD.setOnAction(event ->{
+			
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("ALERTA");
+			alert.setHeaderText("Eliminacion de base de datos");
+			alert.setContentText("Seguro que dese eliminar la base de datos?");
+			
+			Optional<ButtonType> result = alert.showAndWait();
+			
+			if(result.get()== ButtonType.OK) {
+				instance.clearTree();
+				pl.removeList();
+				
+			}
+		});
+		
 
 	}
 

@@ -47,7 +47,7 @@ public class AddPerson extends Stage {
 	private Button btnCancel;
 	
 	private Leer l;
-	private AVL_Tree tree;
+	public static AVL_Tree instance;
 
 	public AddPerson() {
 
@@ -57,6 +57,8 @@ public class AddPerson extends Stage {
 
 			Scene scene = new Scene(root, 600, 400);
 			setScene(scene);
+			
+			instance=AVL_Tree.getInstance();
 
 			tfName = (TextField) loader.getNamespace().get("tfName");
 			tfLastName = (TextField) loader.getNamespace().get("tfLastName");
@@ -153,7 +155,7 @@ public class AddPerson extends Stage {
 		String code = l.generatecode(x, cont);
 		
 		Persona p = new Persona(name, lastName, birthDay,country, pathPhoto, code, gender,age, heithg);
-		tree.add(p.getCode().toString(), p);
+		instance.add(p.getCode().toString(), p);
 		
 		MainWindow main = new MainWindow();
 		main.show();
