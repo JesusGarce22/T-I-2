@@ -25,5 +25,6 @@
       <Button fx:id="btnEdit" layoutX="487.0" layoutY="135.0" mnemonicParsing="false" text="Editar " />
       <Button fx:id="btnDelete" layoutX="483.0" layoutY="175.0" mnemonicParsing="false" text="Eliminar" />
       <Button fx:id="btnAuto" layoutX="171.0" layoutY="332.0" mnemonicParsing="false" text="Generar Datos automaticamente" />
+      <Button fx:id="showTable" layoutX="190.0" layoutY="38.0" mnemonicParsing="false" text="Ver base de datos" />
    </children>
 </AnchorPane>

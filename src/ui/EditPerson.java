@@ -65,7 +65,9 @@ public class EditPerson extends Stage {
 	}
 
 	public void init() {
+		
 		btnBrowse.setOnAction(event->{
+			
 			
 		});
 		

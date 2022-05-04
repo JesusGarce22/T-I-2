@@ -16,14 +16,17 @@ public class Leer extends Thread{
 
 	private int number;
 	public static AVL_Tree instance;
+	public static PersonList list;
 
 	public Leer(int number) {
 		this.number=number;
+		instance=AVL_Tree.getInstance();
+		list=list.getInstance();
 	}
 
 	@Override
 	public void run() {
-		instance=AVL_Tree.getInstance();
+		
 		generateDates(number);
 	}
 
@@ -305,7 +308,7 @@ public class Leer extends Thread{
 				if(instance!=null) {
 					instance.add((String) p.getCode(),p);
 				}**/
-				
+				list.add(p);
 				p.printInfo();
 				
 				//next

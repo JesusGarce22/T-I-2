@@ -14,6 +14,7 @@ import model.Persona;
 public class MainWindow extends Stage {
 
 	private TextField tfSearch;
+	public static BaseOfDates list;
 
 	private ListView<Persona> listUsers;
 	private Button btnAdd;
@@ -21,7 +22,7 @@ public class MainWindow extends Stage {
 	private Button btnDelete;
 	private Button btnAuto;
 	private Button btnSearch;
-
+	private Button showTable;
 
 	public MainWindow() {
 
@@ -39,6 +40,7 @@ public class MainWindow extends Stage {
 			btnEdit = (Button) loader.getNamespace().get("btnEdit");
 			btnDelete = (Button) loader.getNamespace().get("btnDelete");
 			btnAuto = (Button) loader.getNamespace().get("btnAuto");
+			showTable = (Button) loader.getNamespace().get("showTable");
 
 			init();
 
@@ -86,7 +88,11 @@ public class MainWindow extends Stage {
 
 		});
 
+		showTable.setOnAction(event ->{
+			list=list.getInstance();
+			list.show();
 
+		});
 
 
 

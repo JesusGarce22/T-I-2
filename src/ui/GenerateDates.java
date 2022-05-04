@@ -66,18 +66,28 @@ public class GenerateDates extends Stage{
 
 				read.start();;
 
+				if(read.isAlive()) {
+					timeGenerate.setText("Generando datos...");
 
-
-
+				}
 			}
 
 		});	
 		saveGenerationBotton.setOnAction(event->{
-			if(read.isAlive())
+			if(read.isAlive()==false)
 			{
+				timeGenerate.setText("Carga finalizada.");
+				
 				MainWindow main = new MainWindow();
 				main.show();
 				this.close();
+			}else {
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setTitle("ERROR");
+				alert.setHeaderText("TERMINAR GENERACION");
+				alert.setContentText("Por favor espera hasta que se generen todos los datos antes de volver a la pantalla principal");
+
+				alert.showAndWait();
 			}		
 
 		});
