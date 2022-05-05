@@ -11,6 +11,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.AVL_Tree;
@@ -20,10 +21,10 @@ import model.Persona;
 public class MainWindow extends Stage {
 
 	private TextField tfSearch;
+	private TextArea taDatesPerson;
 	public static BaseOfDates list;
 	public static AVL_Tree instance;
 
-	private ListView<Persona> listUsers;
 	private Button btnAdd;
 	private Button btnEdit;
 	private Button btnDelete;
@@ -40,13 +41,13 @@ public class MainWindow extends Stage {
 
 			Scene scene = new Scene(root, 600, 400);
 			setScene(scene);
-			
-			instance=AVL_Tree.getInstance();
-	
 
+			instance = AVL_Tree.getInstance();
+
+			taDatesPerson = (TextArea) loader.getNamespace().get("taDatesPerson");
 			btnSearch = (Button) loader.getNamespace().get("btnSearch");
 			tfSearch = (TextField) loader.getNamespace().get("tfSearch");
-			listUsers = (ListView) loader.getNamespace().get("listUsers");
+
 			btnAdd = (Button) loader.getNamespace().get("btnAdd");
 			btnEdit = (Button) loader.getNamespace().get("btnEdit");
 			btnDelete = (Button) loader.getNamespace().get("btnDelete");
@@ -55,14 +56,12 @@ public class MainWindow extends Stage {
 			btnDeletaBD = (Button) loader.getNamespace().get("btnDeletaBD");
 			init();
 
-
-		}catch(Exception ex) {
+		} catch (Exception ex) {
 
 			ex.printStackTrace();
 		}
 
 	}
-
 
 	public void init() {
 
@@ -73,51 +72,69 @@ public class MainWindow extends Stage {
 			this.close();
 		});
 
-		btnEdit.setOnAction(event ->{
+		btnEdit.setOnAction(event -> {
 
-				Edit e=new Edit();
-				e.show();
+			Edit e = new Edit();
+			e.show();
 		});
 
-		btnSearch.setOnAction(event ->{
+		btnSearch.setOnAction(event -> {
 
+			String sP = tfSearch.getText();
+
+			String aux = instance.triggerSearch(sP);
+
+			if (aux == null) {
+
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("ERROR");
+				alert.setHeaderText("Persona no encontrada");
+				alert.setContentText("Asegurese de ingresar el codigo correctamente");
+				alert.showAndWait();
+
+			} else {
+
+				String message = aux;
+
+				taDatesPerson.setText(message);
+			}
 
 		});
 
-		btnDelete.setOnAction(event ->{
-
+		btnDelete.setOnAction(event -> {
 
 		});
 
-		btnAuto.setOnAction(event ->{
+		btnAuto.setOnAction(event -> {
 
-			GenerateDates g=new GenerateDates();
+			GenerateDates g = new GenerateDates();
 			g.show();
 			this.close();
 
 		});
 
-		showTable.setOnAction(event ->{
-			list=list.getInstance();
+		showTable.setOnAction(event -> {
+			list = list.getInstance();
 			list.show();
 
 		});
-		
-		btnDeletaBD.setOnAction(event ->{
-			
+
+		btnDeletaBD.setOnAction(event -> {
+
 			Alert alert = new Alert(AlertType.CONFIRMATION);
 			alert.setTitle("ALERTA");
 			alert.setHeaderText("Eliminacion de base de datos");
 			alert.setContentText("Seguro que dese eliminar la base de datos?");
-			
+
 			Optional<ButtonType> result = alert.showAndWait();
-			
-			if(result.get()== ButtonType.OK) {
+
+			if (result.get() == ButtonType.OK) {
 				instance.clearTree();
 				list.deleteList();
 			}
 		});
-		
+
 	}
+
 
 }

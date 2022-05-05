@@ -3,6 +3,7 @@ package ui;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -27,6 +28,7 @@ import model.AVL_Tree;
 import model.Leer;
 import model.PersonList;
 import model.Persona;
+import model.Save;
 
 public class AddPerson extends Stage {
 
@@ -50,7 +52,8 @@ public class AddPerson extends Stage {
 	private Leer l;
 	public static AVL_Tree instance;
 	public static PersonList list;
-
+	public static Save lod;
+	
 	public AddPerson() {
 
 		try {
@@ -61,6 +64,8 @@ public class AddPerson extends Stage {
 			setScene(scene);
 			
 			instance=AVL_Tree.getInstance();
+			lod = Save.getInstance();
+			
 
 			tfName = (TextField) loader.getNamespace().get("tfName");
 			tfLastName = (TextField) loader.getNamespace().get("tfLastName");
@@ -158,8 +163,10 @@ public class AddPerson extends Stage {
 		
 		Persona p = new Persona(name, lastName, birthDay,country, pathPhoto, code, gender,age, heithg);
 		instance.add(p.getCode().toString(), p);
-		
 		list.add(p);
+		lod.saveReadableFile(p);
+		instance.triggerShowTree();
+		
 		MainWindow main = new MainWindow();
 		main.show();
 		this.close();
@@ -183,8 +190,11 @@ public class AddPerson extends Stage {
 			pathFhoto.setText(file.getAbsolutePath());
 
 		}
+	
 
 	}
+	
+	
 	
 
 }

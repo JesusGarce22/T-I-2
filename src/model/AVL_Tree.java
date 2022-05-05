@@ -51,10 +51,13 @@ public class AVL_Tree<T> {
 
 		String message = "";
 
-		if (n == null) {
+		if (n != null) {
 
 			message = n.getValue().toString();
 
+		}
+		else {
+			message = null;
 		}
 
 		return message;
@@ -63,14 +66,15 @@ public class AVL_Tree<T> {
 
 	public Node search(Node node, String key) {
 		
-		int aux = key.compareTo(node.getKey());
 		
 		if (node == null) {
 
 			return null;
 
 		}
-
+		
+		int aux = key.compareTo(node.getKey());
+		
 		if (node.getKey().equalsIgnoreCase(key)) {
 
 			return node;
@@ -215,12 +219,11 @@ public class AVL_Tree<T> {
 
 	public Node insert(Node current, String key, T value) {
 		
-		int aux = key.compareTo(current.getKey());
-		
 		if (current == null) {
 			return (new Node(key, value));
 		}
-
+		
+		int aux = key.compareTo(current.getKey());
 		if (aux < 0) {
 
 			current.setLeft(insert(current.getLeft(), key, value));

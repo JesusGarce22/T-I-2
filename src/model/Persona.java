@@ -1,6 +1,13 @@
 package model;
 
-public class Persona<T> {
+import java.io.Serializable;
+
+public class Persona<T> implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	private T name;
 	private T lastName;
@@ -130,6 +137,14 @@ public class Persona<T> {
 	public void setHeith(T heith) {
 		this.heith = heith;
 	}
+
+	@Override
+	public String toString() {
+		return  name + "," + lastName + "," + fullName + ","+ birthDay
+				+ "," + country + "," + photo + "," + code + "," + gender + "," + age
+				+ "," + heith + "\n";
+	}
+	
 	
 	
 }

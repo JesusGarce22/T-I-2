@@ -1,0 +1,198 @@
+null
+Hayley,"
+IYENGAR,
+Hayley"
+IYENGAR,7 OCTOBER 2020,"
+Ucrania,,33K45E1u33E,boy,2,1.89
+
+Tommy,"
+FICCA,
+Tommy"
+FICCA,5 MAY 1968,"
+Qatar,,22J45A3L24L,girl,54,1.64
+
+Rondal,"
+CARLESON,
+Rondal"
+CARLESON,10 AUGUST 2001,"
+Egipto,,9K1L41J2J,boy,21,1.76
+
+Dallin,"
+LESMES,
+Dallin"
+LESMES,8 OCTOBER 2015,"
+Guinea,,1E47A30u28K,boy,7,1.62
+
+Sophie,"
+MEJIAS,
+Sophie"
+MEJIAS,16 JUNE 1987,"
+Dominicana (la),,50J30L22K41J,boy,35,1.82
+
+Van,"
+TUNBERG,
+Van"
+TUNBERG,7 MAY 1976,"
+Armenia,,23u8u24K27J,girl,46,1.60
+
+Lucretia,"
+MEINHART,
+Lucretia"
+MEINHART,23 MARCH 2014,"
+Sudáfrica,,3u17L17A33J,boy,8,1.86
+
+Bernadine,"
+BEGIC,
+Bernadine"
+BEGIC,6 DECEMBER 1955,"
+Malí,,21u20u34J20K,boy,67,1.75
+
+Metro,"
+SOUNG,
+Metro"
+SOUNG,7 NOVEMBER 2017,"
+Paraguay (el),,43L13L28A8L,girl,5,1.74
+
+Darion,"
+KUCZINSKI,
+Darion"
+KUCZINSKI,12 MAY 1966,"
+Dominicana (la),,47J18L35u8E,girl,56,1.74
+
+Alverda,"
+SANTISTEBAN,
+Alverda"
+SANTISTEBAN,17 MARCH 1956,"
+Jamaica,,9A39u43J31J,boy,66,1.92
+
+Gabriella,"
+FROHREICH,
+Gabriella"
+FROHREICH,17 JULY 1944,"
+Irán (República Islámica del),,14J19L44K26K,boy,78,1.94
+
+Andria,"
+SCHLIEMANN,
+Andria"
+SCHLIEMANN,23 JUNE 1959,"
+República Centroafricana (la),,49u1u31K38J,girl,63,1.67
+
+Della,"
+DUENOW,
+Della"
+DUENOW,8 OCTOBER 1963,"
+Bahamas (las),,16L35L22J46A,boy,59,1.98
+
+Drury,"
+BAZANTE,
+Drury"
+BAZANTE,1 JULY 1973,"
+Níger (el),,50L33E22E8u,boy,49,1.86
+
+Tina,"
+BOKMAN,
+Tina"
+BOKMAN,7 MAY 1966,"
+India (la),,24K44K2u19L,boy,56,1.73
+
+Benjamin,"
+TREFFERT,
+Benjamin"
+TREFFERT,16 DECEMBER 1958,"
+Bulgaria,,40u26L37J49K,girl,64,1.85
+
+Tyquan,"
+BHUTTA,
+Tyquan"
+BHUTTA,10 APRIL 2005,"
+Emiratos Árabes Unidos (los),,44E31A35K14u,girl,17,1.87
+
+Constance,"
+SHELLITO,
+Constance"
+SHELLITO,21 OCTOBER 1957,"
+Dominicana (la),,40J32A1K48u,girl,65,1.68
+
+Sal,"
+DINGLEY,
+Sal"
+DINGLEY,5 JULY 1945,"
+República Árabe Siria (la),,2L18A44A40K,boy,77,1.79
+
+Sam,"
+WERKMEISTER,
+Sam"
+WERKMEISTER,29 AUGUST 1948,"
+Kenya,,31E45L39u7E,boy,74,1.74
+
+Debera,"
+RAUTIO,
+Debera"
+RAUTIO,24 OCTOBER 2016,"
+Mauritania,,25u23E49J32E,girl,6,1.61
+
+Krystal,"
+EAKES,
+Krystal"
+EAKES,22 JULY 2014,"
+Estonia,,6L35E41L48J,girl,8,1.89
+
+Huey,"
+SILBERT,
+Huey"
+SILBERT,26 SEPTEMBER 1956,"
+Ucrania,,16E2K12u27K,girl,66,1.63
+
+Boyd,"
+SPALT,
+Boyd"
+SPALT,11 SEPTEMBER 1955,"
+Lituania,,30J20J36J49J,boy,67,1.69
+
+Danae,"
+PAVLOFF,
+Danae"
+PAVLOFF,4 FEBRUARY 1984,"
+Kirguistán,,22A3J27L43E,girl,38,1.68
+
+Makai,"
+MAGNETTI,
+Makai"
+MAGNETTI,9 MARCH 1993,"
+Cuba,,12u48L38u32u,girl,29,1.75
+
+Debby,"
+KESKA,
+Debby"
+KESKA,20 AUGUST 1963,"
+Dominica,,26A24K20L33J,girl,59,1.79
+
+Deliah,"
+SHAHRESTANI,
+Deliah"
+SHAHRESTANI,19 APRIL 1946,"
+Malawi,,7J41A30J28K,boy,76,1.78
+
+Ellyn,"
+PARVEEN,
+Ellyn"
+PARVEEN,12 OCTOBER 1969,"
+Guinea,,2L18A41E38J,boy,53,1.90
+
+Marquis,"
+OCACIO,
+Marquis"
+OCACIO,3 MARCH 1990,"
+Angola,,14u27A45L39A,boy,32,1.74
+
+Kole,"
+MURACO,
+Kole"
+MURACO,17 OCTOBER 1955,"
+Kazajstán,,4A18A37A14L,boy,67,1.64
+
+Nakita,"
+BALLINGER,
+Nakita"
+BALLINGER,21 JULY 1950,"
+Turquía,,10J22J1E5E,girl,72,1.99
