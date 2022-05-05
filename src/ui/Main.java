@@ -4,6 +4,13 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+	
+	/*
+	 * Autores:
+	 * Cristian Cardona
+	 * Jesus Garces 
+	 * Estefania Gonzales
+	 */
 
 	public static void main(String[] args) {
 		

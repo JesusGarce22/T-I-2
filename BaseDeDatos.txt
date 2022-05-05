@@ -196,3 +196,33 @@ BALLINGER,
 Nakita"
 BALLINGER,21 JULY 1950,"
 Turquía,,10J22J1E5E,girl,72,1.99
+
+Vira,"
+STABENOW,
+Vira"
+STABENOW,25 SEPTEMBER 1955,"
+Kirguistán,,19J15L28L30J,boy,67,1.93
+
+Zona,"
+SEGEDY,
+Zona"
+SEGEDY,1 MARCH 2003,"
+Austria,,38u2K35E49L,girl,19,1.85
+
+Hartley,"
+ROBERTIELLO,
+Hartley"
+ROBERTIELLO,29 APRIL 1957,"
+Brasil (el),,49J42J44K30u,girl,65,1.63
+
+Machelle,"
+MEYERHOLZ,
+Machelle"
+MEYERHOLZ,5 NOVEMBER 1985,"
+Sierra Leona,,4K26K11A33L,boy,37,1.68
+
+Josefina,"
+PEERCE,
+Josefina"
+PEERCE,25 FEBRUARY 2002,"
+Bhután,,1E49E46L47u,boy,20,1.89

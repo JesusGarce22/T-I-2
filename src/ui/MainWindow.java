@@ -32,6 +32,7 @@ public class MainWindow extends Stage {
 	private Button btnSearch;
 	private Button showTable;
 	private Button btnDeletaBD;
+	private Button exit;
 
 	public MainWindow() {
 
@@ -54,6 +55,7 @@ public class MainWindow extends Stage {
 			btnAuto = (Button) loader.getNamespace().get("btnAuto");
 			showTable = (Button) loader.getNamespace().get("showTable");
 			btnDeletaBD = (Button) loader.getNamespace().get("btnDeletaBD");
+			exit = (Button) loader.getNamespace().get("exit");
 			init();
 
 		} catch (Exception ex) {
@@ -102,6 +104,32 @@ public class MainWindow extends Stage {
 		});
 
 		btnDelete.setOnAction(event -> {
+			
+			String delete = tfSearch.getText();
+			
+			if(delete == null) {
+				
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("ERROR");
+				alert.setHeaderText("No ha ingresado un codigo");
+				alert.setContentText("Debes ingresar un codigo para eliminar");
+				alert.showAndWait();		
+			}
+			else {
+				
+				String aux = delete;
+				taDatesPerson.setText("Usuario: "+aux+ " eliminado");
+				instance.triggerDelete(aux);
+				
+				
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("Eliminacion");
+				alert.setHeaderText("Eliminacion");
+				alert.setContentText("Se ha eliminado a la persona con exito de la base de datos");
+				alert.showAndWait();
+				
+				
+			}
 
 		});
 
@@ -131,7 +159,13 @@ public class MainWindow extends Stage {
 			if (result.get() == ButtonType.OK) {
 				instance.clearTree();
 				list.deleteList();
+				
 			}
+		});
+		
+		exit.setOnAction(event ->{
+			
+			System.exit(0);
 		});
 
 	}
