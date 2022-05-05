@@ -69,6 +69,14 @@ public class GenerateDates extends Stage{
 				if(read.isAlive()) {
 					timeGenerate.setText("Generando datos...");
 
+				}else
+				{
+					Alert alert = new Alert(AlertType.ERROR);
+					alert.setTitle("CARGA FINALIZADA");
+					alert.setHeaderText("CARGA FINALIZADA");
+					alert.setContentText("CARGA FINALIZADA");
+
+					alert.showAndWait();
 				}
 			}
 

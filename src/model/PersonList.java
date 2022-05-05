@@ -43,18 +43,17 @@ public class PersonList {
 		return find;
 	}
 
-	/*
-	public boolean changePass(String password, String newPass) {
-		boolean find = true;  
+	
+	public Persona changeInfo(String code) {
+		Persona find = new Persona("", "", "","", "", "","", "", "");  
 
 		for(int i = 0;i < list.size();i++) {
-			if(list.get(i).getPassword().equalsIgnoreCase(password)) {
-				list.get(i).setPassword(newPass);
-				find = false;
+			if(list.get(i).getCode().toString().equalsIgnoreCase(code)) {
+				find = list.get(i);
 			}
 		}
 		return find;
-	}*/
+	}
 
 	public void add(Persona p) {
 		list.add(p);

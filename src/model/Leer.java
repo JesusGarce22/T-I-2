@@ -26,7 +26,7 @@ public class Leer extends Thread{
 
 	@Override
 	public void run() {
-		
+
 		generateDates(number);
 	}
 
@@ -299,19 +299,18 @@ public class Leer extends Thread{
 			for(int i =0;i<num;i++) {
 				String x="";
 				int contador=0;
-				Persona p=new Persona(autoGeneraNames(name), autoGenerateLastnames(lastname), "",autoGenerateCountris(country), generatecode(x,contador), "",autoGenerateGender(gender),(int) (Math.random() * 80 + 1),"");
+				Persona p=new Persona(autoGeneraNames(name), autoGenerateLastnames(lastname), "",autoGenerateCountris(country),"", generatecode(x,contador), autoGenerateGender(gender),(int) (Math.random() * 80 + 1),"");
 				String d=generateDateOfBirtday((int) p.getAge());
 				p.setBirthDay(d);
 				String h=generateHeigth((String) p.getGender());
 				p.setHeith(h);
-			/*se agrega  una persona generada al arbol
-				if(instance!=null) {
-					instance.add((String) p.getCode(),p);
-				}**/
+				//se agrega  una persona generada al arbol
+				System.out.println(p.getCode().toString());
+				//instance.add(p.getCode().toString(), p);
 				list.add(p);
 				p.printInfo();
-				
-				//next
+				//instance.triggerShowTree();
+
 			}
 		}
 	}

@@ -75,10 +75,8 @@ public class MainWindow extends Stage {
 
 		btnEdit.setOnAction(event ->{
 
-			EditPerson edit = new EditPerson();
-			edit.show();
-			this.close();
-
+				Edit e=new Edit();
+				e.show();
 		});
 
 		btnSearch.setOnAction(event ->{

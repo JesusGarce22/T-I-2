@@ -25,6 +25,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.AVL_Tree;
 import model.Leer;
+import model.PersonList;
 import model.Persona;
 
 public class AddPerson extends Stage {
@@ -48,6 +49,7 @@ public class AddPerson extends Stage {
 	
 	private Leer l;
 	public static AVL_Tree instance;
+	public static PersonList list;
 
 	public AddPerson() {
 
@@ -122,7 +124,7 @@ public class AddPerson extends Stage {
 	}
 
 	public void createPerson() {
-
+		list=list.getInstance();
 		String name = tfName.getText();
 
 		String lastName = tfLastName.getText();
@@ -157,6 +159,7 @@ public class AddPerson extends Stage {
 		Persona p = new Persona(name, lastName, birthDay,country, pathPhoto, code, gender,age, heithg);
 		instance.add(p.getCode().toString(), p);
 		
+		list.add(p);
 		MainWindow main = new MainWindow();
 		main.show();
 		this.close();
