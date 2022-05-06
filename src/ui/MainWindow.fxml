@@ -23,5 +23,6 @@
       <Button fx:id="showTable" layoutX="190.0" layoutY="38.0" mnemonicParsing="false" text="Ver base de datos" />
       <Button fx:id="btnDeletaBD" layoutX="334.0" layoutY="38.0" mnemonicParsing="false" text="Eliminar base de datos" />
       <TextArea fx:id="taDatesPerson" layoutX="40.0" layoutY="120.0" prefHeight="200.0" prefWidth="422.0" />
+      <Button fx:id="exit" layoutX="462.0" layoutY="345.0" mnemonicParsing="false" text="Salir del programa" />
    </children>
 </AnchorPane>

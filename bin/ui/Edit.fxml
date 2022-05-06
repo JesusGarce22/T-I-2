@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #19AE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea layoutX="39.0" layoutY="14.0" prefHeight="91.0" prefWidth="223.0" text="INGRESE EL CODIGO DE LA PERSONA&#10;      CUYA INFORMACION DESEA &#10;                   ACTUALIZAR." />
+      <TextField fx:id="codeChange" layoutX="49.0" layoutY="115.0" prefHeight="39.0" prefWidth="203.0" />
+      <Button fx:id="OK" layoutX="117.0" layoutY="161.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="OK" />
+   </children>
+</AnchorPane>

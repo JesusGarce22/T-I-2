@@ -197,6 +197,7 @@ Nakita"
 BALLINGER,21 JULY 1950,"
 Turquía,,10J22J1E5E,girl,72,1.99
 
+<<<<<<< HEAD
 Margueritta,"
 CAME,
 Margueritta"
@@ -1434,3 +1435,94 @@ MCGONAGILL,
 Roxann"
 MCGONAGILL,23 DECEMBER 2006,"
 República Democrática Popular Lao (la),,44A24L25L37J,girl,16,1.92
+=======
+Vira,"
+STABENOW,
+Vira"
+STABENOW,25 SEPTEMBER 1955,"
+Kirguistán,,19J15L28L30J,boy,67,1.93
+
+Zona,"
+SEGEDY,
+Zona"
+SEGEDY,1 MARCH 2003,"
+Austria,,38u2K35E49L,girl,19,1.85
+
+Hartley,"
+ROBERTIELLO,
+Hartley"
+ROBERTIELLO,29 APRIL 1957,"
+Brasil (el),,49J42J44K30u,girl,65,1.63
+
+Machelle,"
+MEYERHOLZ,
+Machelle"
+MEYERHOLZ,5 NOVEMBER 1985,"
+Sierra Leona,,4K26K11A33L,boy,37,1.68
+
+Josefina,"
+PEERCE,
+Josefina"
+PEERCE,25 FEBRUARY 2002,"
+Bhután,,1E49E46L47u,boy,20,1.89
+
+Inga,"
+SCIFERS,
+Inga"
+SCIFERS,3 JULY 1942,"
+España,,17E6K29E6J,boy,80,1.69
+
+Nelle,"
+AVRAMOV,
+Nelle"
+AVRAMOV,24 APRIL 1992,"
+Albania,,42A14K1A15u,girl,30,1.66
+
+Annabell,"
+WOSKA,
+Annabell"
+WOSKA,2 DECEMBER 2015,"
+Liberia,,26E35K35E42E,boy,7,1.60
+
+Brea,"
+KILTHAU,
+Brea"
+KILTHAU,16 JANUARY 1957,"
+Camboya,,18L35A5K35u,boy,65,1.82
+
+Messiah,"
+VARAO,
+Messiah"
+VARAO,19 MAY 2019,"
+Uzbekistán,,42J48J16K25J,girl,3,1.73
+
+Donia,"
+MAZZARISI,
+Donia"
+MAZZARISI,29 OCTOBER 1988,"
+Guinea Ecuatorial (la),,33E47K18J47L,boy,34,1.90
+
+Marceline,"
+PERROTT,
+Marceline"
+PERROTT,25 DECEMBER 2008,"
+Congo (el),,2A15u3A2K,boy,14,1.74
+
+Weston,"
+DREZEK,
+Weston"
+DREZEK,25 JULY 2011,"
+Japón (el),,13E46u38u44J,girl,11,1.62
+
+Darlyne,"
+BLONDIN,
+Darlyne"
+BLONDIN,28 DECEMBER 1955,"
+República Árabe Siria (la),,26K21E11L32L,girl,67,1.83
+
+Moshe,"
+BRUMBLES,
+Moshe"
+BRUMBLES,3 JANUARY 1986,"
+China,,44K28E44u48L,boy,36,1.72
+>>>>>>> 4df89430bde944123e5e4496142e56969b00610f
