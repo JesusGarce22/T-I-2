@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="717.0" style="-fx-background-color: #19AE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="table" layoutX="14.0" layoutY="60.0" prefHeight="375.0" prefWidth="695.0">
+        <columns>
+          <TableColumn fx:id="codeC" prefWidth="75.0" text="CODIGO" />
+          <TableColumn fx:id="nameC" prefWidth="75.0" text="NOMBRE" />
+            <TableColumn fx:id="lastnNameC" prefWidth="75.0" text="APELLIDO" />
+            <TableColumn fx:id="staC" prefWidth="75.0" text="STATURA" />
+            <TableColumn fx:id="conuntryC" prefWidth="75.0" text="PAIS" />
+            <TableColumn fx:id="dateC" prefWidth="149.0" text="FECHA DE NACIMIENTO" />
+            <TableColumn fx:id="agaC" prefWidth="75.0" text="EDAD" />
+            <TableColumn fx:id="genderC" prefWidth="75.0" text="GENERO" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="128.0" layoutY="14.0" prefHeight="26.0" prefWidth="444.0" text="BASE DE DATOS DE PERSONAS ">
+         <font>
+            <Font name="Agency FB" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
