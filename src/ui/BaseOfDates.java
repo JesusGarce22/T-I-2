@@ -16,7 +16,9 @@ import model.PersonList;
 import model.Persona;
 
 public class BaseOfDates extends Stage{
-
+	
+	private static int num=1;
+	
 	public static BaseOfDates instance;
 	public static PersonList list;
 	static ObservableList<Persona> observableList;
@@ -32,6 +34,7 @@ public class BaseOfDates extends Stage{
 	private TableView<Persona> table;
 
 	public BaseOfDates() {
+		setNum(0);
 		list=list.getInstance();
 
 		try {
@@ -81,6 +84,7 @@ public class BaseOfDates extends Stage{
 	}
 	
 	public static BaseOfDates getInstance() {
+		setNum(getNum() + 1);
 		if (instance == null) {
 			instance = new BaseOfDates();
 			;
@@ -91,7 +95,20 @@ public class BaseOfDates extends Stage{
 	
 	public void deleteList() {
 		observableList=null;
+		list.removeList();
 		
 		table.setItems(observableList);
+	}
+	
+	public void updateList() {
+		table();
+	}
+
+	public static int getNum() {
+		return num;
+	}
+
+	public static void setNum(int num) {
+		BaseOfDates.num = num;
 	}
 }

@@ -115,6 +115,9 @@ public class MainWindow extends Stage {
 
 		showTable.setOnAction(event -> {
 			list = list.getInstance();
+			if(list.getNum()!=0) {
+				list.updateList();
+			}
 			list.show();
 
 		});

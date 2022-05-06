@@ -90,6 +90,9 @@ public class EditPerson extends Stage {
 		});
 
 		btnUpload.setOnAction(event->{
+			String sP = coode;
+
+			String aux = instance.triggerSearch(sP);
 			Persona x=list.changeInfo(coode);
 			if(x!=null){
 				if((tfChName.getText() != null) && (tfChLastName.getText() != null) && (tfChHeight.getText() != null) &&
