@@ -324,4 +324,7 @@ public class AVL_Tree<T> {
 		return current.getHeight();
 	}
 
+	public Node getTree() {
+		return root;
+	}
 }

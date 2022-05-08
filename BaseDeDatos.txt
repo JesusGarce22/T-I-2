@@ -1526,3 +1526,87 @@ Moshe"
 BRUMBLES,3 JANUARY 1986,"
 China,,44K28E44u48L,boy,36,1.72
 >>>>>>> 4df89430bde944123e5e4496142e56969b00610f
+
+Deyanira,"
+NAJAM,
+Deyanira"
+NAJAM,5 SEPTEMBER 1964,"
+Suecia,,25J42J50K4J,boy,58,1.76
+
+Ephram,"
+HOYER,
+Ephram"
+HOYER,29 JANUARY 1942,"
+Hungría,,6u14E10A30L,boy,80,1.67
+
+Rhett,"
+KATO,
+Rhett"
+KATO,14 AUGUST 2009,"
+Tuvalu,,7J6A18u8K,girl,13,1.99
+
+Khloe,"
+LOEBE,
+Khloe"
+LOEBE,19 JUNE 2012,"
+República de Corea (la),,28L16K16L23u,boy,10,1.63
+
+Texanna,"
+BRACCIO,
+Texanna"
+BRACCIO,18 NOVEMBER 1968,"
+Iraq (el),,18E36J28K47E,boy,54,1.77
+
+Isaak,"
+WILTSIE,
+Isaak"
+WILTSIE,27 DECEMBER 2014,"
+Ucrania,,22E26E23u5K,boy,8,1.85
+
+Tillie,"
+JESSO,
+Tillie"
+JESSO,20 FEBRUARY 1950,"
+Andorra,,16A24E41E1A,boy,72,1.85
+
+Sigmund,"
+LOPARCO,
+Sigmund"
+LOPARCO,29 FEBRUARY 2021,"
+Camboya,,46A9K48L9A,boy,1,1.62
+
+Jemima,"
+POLONI,
+Jemima"
+POLONI,24 APRIL 2021,"
+Gabón (el),,21u2J45K49u,girl,1,1.95
+
+Jarvis,"
+WYLDE,
+Jarvis"
+WYLDE,9 MARCH 1993,"
+Mauritania,,27J26J50u47K,girl,29,1.86
+
+Jonna,"
+PETERSEN,
+Jonna"
+PETERSEN,30 APRIL 1988,"
+Antigua y Barbuda,,40L45J29K9K,girl,34,1.69
+
+Olevia,"
+GORSUCH,
+Olevia"
+GORSUCH,10 SEPTEMBER 2016,"
+Italia,,46E41J12u15A,girl,6,1.94
+
+Nathanael,"
+NAKATSU,
+Nathanael"
+NAKATSU,30 DECEMBER 2008,"
+Malta,,9L26E32E7J,boy,14,1.69
+
+Emely,"
+KITTS,
+Emely"
+KITTS,11 MARCH 2018,"
+Perú (el),,26L50L47A37J,girl,4,1.86

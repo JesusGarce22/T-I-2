@@ -314,7 +314,8 @@ public class Leer extends Thread{
 				p.printInfo();
 				instance.triggerShowTree();
 				//instance.triggerShowTree();
-
+				
+				
 			}
 		}
 	}
