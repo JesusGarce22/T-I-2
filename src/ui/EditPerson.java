@@ -37,18 +37,19 @@ public class EditPerson extends Stage {
 
 	private ImageView photo;
 
-	private ComboBox<String> boxChNacionality;
+	private TextField tfChNacionality;
 
 	private Button btnBrowse;
 	private Button btnCancel;
 	private Button btnUpload;
 
+	private Persona p;
+	
 	public static AVL_Tree instance;
 	public static PersonList list;
 
 	public EditPerson(String coode) {
 		this.coode=coode;
-
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("EditPerson.fxml"));
 			Parent root = loader.load();
@@ -57,10 +58,10 @@ public class EditPerson extends Stage {
 			setScene(scene);
 
 			tfChName = (TextField) loader.getNamespace().get("tfChName");
-			tfChName.setText(coode);
 			tfChLastName = (TextField) loader.getNamespace().get("tfChLastName");
 			chPathPhoto = (TextField) loader.getNamespace().get("chPathPhoto");
 			tfChHeight = (TextField) loader.getNamespace().get("tfChHeight");
+			tfChNacionality = (TextField) loader.getNamespace().get("tfChNacionality");
 
 			rdbChMale = (RadioButton) loader.getNamespace().get("rdbChMale");
 			rdbChFem = (RadioButton) loader.getNamespace().get("rdbChFem");
@@ -74,6 +75,12 @@ public class EditPerson extends Stage {
 			btnCancel = (Button) loader.getNamespace().get("btnCancel");
 
 			instance=instance.getInstance();
+			list = list.getInstance();
+			 p=list.changeInfo(coode);
+			   
+			   tfChName.setText(p.getName().toString());
+			   tfChLastName.setText(p.getLastName().toString());
+			   tfChNacionality.setText(p.getCountry().toString());
 			init();
 
 		}catch(Exception ex) {
@@ -82,18 +89,15 @@ public class EditPerson extends Stage {
 		}
 	}
 
-	public void init() throws NullPointerException{
-
+	public void init() {
 		btnBrowse.setOnAction(event->{
-
-
+			photoPath();
 		});
 
 		btnUpload.setOnAction(event->{
-			String sP = coode;
-
-			String aux = instance.triggerSearch(sP);
-			Persona x=list.changeInfo(coode);
+			String aux = instance.triggerSearch(coode);
+		   Persona x= p;
+		System.out.println("Persona antes de:"+x);
 			if(x!=null){
 				if((tfChName.getText() != null) && (tfChLastName.getText() != null) && (tfChHeight.getText() != null) &&
 						((rdbChMale.getText()!=null) || (rdbChFem.getText()!=null)) &&
@@ -115,9 +119,6 @@ public class EditPerson extends Stage {
 
 			alert.showAndWait();
 			}
-
-
-
 		});
 
 		btnCancel.setOnAction(event->{
@@ -127,16 +128,36 @@ public class EditPerson extends Stage {
 			this.close();
 
 		});
+	}
+	
+	public void photoPath() {
+		FileChooser fc = new FileChooser();
+		fc.setTitle("Abra una imagen");
+		fc.getExtensionFilters().addAll(
 
+				new FileChooser.ExtensionFilter("PNG", "*.png"), new FileChooser.ExtensionFilter("JPG", "*.jpg")
+
+		);
+
+		File file = fc.showOpenDialog(this);
+
+		if (file != null) {
+			Image image = new Image("file:" + file.getAbsolutePath());
+			photo.setImage(image);
+			chPathPhoto.setText(file.getAbsolutePath());
+
+		}
 	}
 
 	private void changeInformation() {
-		list=list.getInstance();
-		Persona s=list.changeInfo(coode);
+		Persona s = p;
 		if(s!=null) {
 			s.setName(tfChName.getText());
 
 			s.setLastName(tfChLastName.getText());
+			
+			String fullName = tfChName.getText()+" "+tfChLastName.getText();
+			s.setFullName(fullName);
 
 			String gender = "";
 
@@ -151,10 +172,10 @@ public class EditPerson extends Stage {
 				s.setGender(gender);
 			}
 
-			String country = boxChNacionality.getPromptText();
-
+			String country = tfChNacionality.getText();
+			s.setCountry(country);
 			String birthDay = dateChBirthday.getValue().toString();
-
+			s.setBirthDay(birthDay);
 			String pathPhoto = "";
 
 			String heithg = tfChHeight.getText();
@@ -177,8 +198,7 @@ public class EditPerson extends Stage {
 			alert.showAndWait();
 
 		}
-
+		s = p;
 	}
-
-
+	
 }
