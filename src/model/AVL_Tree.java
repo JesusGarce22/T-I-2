@@ -329,7 +329,6 @@ public class AVL_Tree<T> {
 	public Node getTree() {
 		return root;
 	}
-<<<<<<< HEAD
 
 	public Node nodeForEdit(Node n) {
 		
@@ -343,6 +342,4 @@ public class AVL_Tree<T> {
 
 	}
 }
-=======
-}
->>>>>>> 829c18aebc2728f42b9254c36b63ae16fed5b5ce
+
