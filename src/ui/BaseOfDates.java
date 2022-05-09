@@ -1,7 +1,6 @@
 package ui;
 
 import java.io.IOException;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -34,6 +33,7 @@ public class BaseOfDates extends Stage{
 	private TableView<Persona> table;
 
 	public BaseOfDates() {
+		
 		setNum(0);
 		list=list.getInstance();
 
@@ -55,7 +55,7 @@ public class BaseOfDates extends Stage{
 			staC = (TableColumn) loader.getNamespace().get("staC");
 			codeC = (TableColumn) loader.getNamespace().get("codeC");
 			conuntryC = (TableColumn) loader.getNamespace().get("conuntryC");
-
+			updateList();
 			table();
 
 		} catch (IOException e) {

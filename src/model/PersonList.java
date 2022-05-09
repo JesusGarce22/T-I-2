@@ -46,12 +46,15 @@ public class PersonList {
 	
 	public Persona changeInfo(String code) {
 		Persona find = new Persona("", "", "","", "", "","", "", "");  
-
+		
 		for(int i = 0;i < list.size();i++) {
+	
 			if(list.get(i).getCode().toString().equalsIgnoreCase(code)) {
 				find = list.get(i);
+				
 			}
 		}
+
 		return find;
 	}
 

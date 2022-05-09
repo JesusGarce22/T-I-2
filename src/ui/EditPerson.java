@@ -48,8 +48,19 @@ public class EditPerson extends Stage {
 	public static AVL_Tree instance;
 	public static PersonList list;
 
+<<<<<<< HEAD
 	public EditPerson(String coode) {
 		this.coode=coode;
+=======
+<<<<<<< HEAD
+	public EditPerson(Persona p) {
+		this.p=p;
+
+=======
+	public EditPerson(String coode) {
+		this.coode=coode;
+>>>>>>> 829c18aebc2728f42b9254c36b63ae16fed5b5ce
+>>>>>>> 1f8dd23a0cec8b79f163c07d59bc5e354a78a654
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("EditPerson.fxml"));
 			Parent root = loader.load();
@@ -95,10 +106,21 @@ public class EditPerson extends Stage {
 		});
 
 		btnUpload.setOnAction(event->{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+			if(p!=null){
+=======
+>>>>>>> 1f8dd23a0cec8b79f163c07d59bc5e354a78a654
 			String aux = instance.triggerSearch(coode);
 		   Persona x= p;
 		System.out.println("Persona antes de:"+x);
 			if(x!=null){
+<<<<<<< HEAD
+=======
+>>>>>>> 829c18aebc2728f42b9254c36b63ae16fed5b5ce
+>>>>>>> 1f8dd23a0cec8b79f163c07d59bc5e354a78a654
 				if((tfChName.getText() != null) && (tfChLastName.getText() != null) && (tfChHeight.getText() != null) &&
 						((rdbChMale.getText()!=null) || (rdbChFem.getText()!=null)) &&
 						(dateChBirthday.getValue()!=null) && (photo!=null)) {
@@ -150,17 +172,39 @@ public class EditPerson extends Stage {
 	}
 
 	private void changeInformation() {
+<<<<<<< HEAD
 		Persona s = p;
 		if(s!=null) {
 			s.setName(tfChName.getText());
 
+=======
+<<<<<<< HEAD
+		list=list.getInstance();
+
+		p.editPerson(p,tfChName.getText() ,tfChLastName.getText() , boxChNacionality.getPromptText(), 2022 - (dateChBirthday.getValue().getYear()), tfChHeight.getText(), "");
+=======
+		Persona s = p;
+		if(s!=null) {
+			s.setName(tfChName.getText());
+
+>>>>>>> 1f8dd23a0cec8b79f163c07d59bc5e354a78a654
 			s.setLastName(tfChLastName.getText());
 			
 			String fullName = tfChName.getText()+" "+tfChLastName.getText();
 			s.setFullName(fullName);
+<<<<<<< HEAD
+=======
+>>>>>>> 829c18aebc2728f42b9254c36b63ae16fed5b5ce
+>>>>>>> 1f8dd23a0cec8b79f163c07d59bc5e354a78a654
 
 			String gender = "";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		if (rdbChMale.selectedProperty().get() == true) {
+=======
+>>>>>>> 1f8dd23a0cec8b79f163c07d59bc5e354a78a654
 			if (rdbChMale.selectedProperty().get() == true) {
 
 				gender = rdbChMale.getText();
@@ -187,6 +231,10 @@ public class EditPerson extends Stage {
 			MainWindow main = new MainWindow();
 			main.show();
 			this.close();
+<<<<<<< HEAD
+=======
+>>>>>>> 829c18aebc2728f42b9254c36b63ae16fed5b5ce
+>>>>>>> 1f8dd23a0cec8b79f163c07d59bc5e354a78a654
 
 		}
 		else {
@@ -198,7 +246,31 @@ public class EditPerson extends Stage {
 			alert.showAndWait();
 
 		}
+<<<<<<< HEAD
 		s = p;
 	}
 	
 }
+=======
+<<<<<<< HEAD
+
+		String pathPhoto = "";
+
+		MainWindow main = new MainWindow();
+		main.show();
+		this.close();
+
+	}
+
+
+}
+
+
+
+=======
+		s = p;
+	}
+	
+}
+>>>>>>> 829c18aebc2728f42b9254c36b63ae16fed5b5ce
+>>>>>>> 1f8dd23a0cec8b79f163c07d59bc5e354a78a654
