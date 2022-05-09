@@ -11,13 +11,15 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.AVL_Tree;
+import model.Node;
 import model.PersonList;
 import model.Persona;
 
 public class Edit extends Stage{
 
     private TextField codeChange;
-    public static PersonList list;
+    public static AVL_Tree istance;
 
     private Button OK;
     
@@ -31,7 +33,7 @@ public class Edit extends Stage{
 			
 			OK = (Button) loader.getNamespace().get("OK");
 			codeChange = (TextField) loader.getNamespace().get("codeChange");
-			list=list.getInstance();
+			istance=istance.getInstance();
 			
 			init();
 		}catch(Exception ex) {
@@ -42,9 +44,10 @@ public class Edit extends Stage{
 	
 	private void init() {
 		OK.setOnAction(event->{
-			
-			if(codeChange.getText()!=null) {
-				EditPerson edit = new EditPerson(codeChange.getText());
+			String code=istance.triggerSearch(codeChange.getText());
+			Node x=istance.nodeForEdit(null);
+			if(code.equalsIgnoreCase(x.getValue().toString())) {
+				EditPerson edit = new EditPerson((Persona) x.getValue());
 				edit.show();
 				this.close();
 			}

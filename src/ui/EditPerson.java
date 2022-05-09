@@ -22,8 +22,7 @@ import model.PersonList;
 import model.Persona;
 
 public class EditPerson extends Stage {
-	private Leer l;
-	private String coode;
+	private Persona p;
 
 	private TextField tfChName;
 	private TextField tfChLastName;
@@ -46,8 +45,8 @@ public class EditPerson extends Stage {
 	public static AVL_Tree instance;
 	public static PersonList list;
 
-	public EditPerson(String coode) {
-		this.coode=coode;
+	public EditPerson(Persona p) {
+		this.p=p;
 
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("EditPerson.fxml"));
@@ -57,7 +56,6 @@ public class EditPerson extends Stage {
 			setScene(scene);
 
 			tfChName = (TextField) loader.getNamespace().get("tfChName");
-			tfChName.setText(coode);
 			tfChLastName = (TextField) loader.getNamespace().get("tfChLastName");
 			chPathPhoto = (TextField) loader.getNamespace().get("chPathPhoto");
 			tfChHeight = (TextField) loader.getNamespace().get("tfChHeight");
@@ -90,11 +88,8 @@ public class EditPerson extends Stage {
 		});
 
 		btnUpload.setOnAction(event->{
-			String sP = coode;
 
-			String aux = instance.triggerSearch(sP);
-			Persona x=list.changeInfo(coode);
-			if(x!=null){
+			if(p!=null){
 				if((tfChName.getText() != null) && (tfChLastName.getText() != null) && (tfChHeight.getText() != null) &&
 						((rdbChMale.getText()!=null) || (rdbChFem.getText()!=null)) &&
 						(dateChBirthday.getValue()!=null) && (photo!=null)) {
@@ -132,53 +127,30 @@ public class EditPerson extends Stage {
 
 	private void changeInformation() {
 		list=list.getInstance();
-		Persona s=list.changeInfo(coode);
-		if(s!=null) {
-			s.setName(tfChName.getText());
 
-			s.setLastName(tfChLastName.getText());
+		p.editPerson(p,tfChName.getText() ,tfChLastName.getText() , boxChNacionality.getPromptText(), 2022 - (dateChBirthday.getValue().getYear()), tfChHeight.getText(), "");
 
-			String gender = "";
+		String gender = "";
 
-			if (rdbChMale.selectedProperty().get() == true) {
+		if (rdbChMale.selectedProperty().get() == true) {
 
-				gender = rdbChMale.getText();
-				s.setGender(gender);
-			}
-
-			else if (rdbChFem.selectedProperty().get() == true) {
-				gender = rdbChFem.getText();
-				s.setGender(gender);
-			}
-
-			String country = boxChNacionality.getPromptText();
-
-			String birthDay = dateChBirthday.getValue().toString();
-
-			String pathPhoto = "";
-
-			String heithg = tfChHeight.getText();
-			s.setHeith(heithg);
-
-			int age = 2022 - (dateChBirthday.getValue().getYear());
-			s.setAge(age);
-
-			MainWindow main = new MainWindow();
-			main.show();
-			this.close();
-
+			gender = rdbChMale.getText();
 		}
-		else {
-			Alert alert = new Alert(AlertType.ERROR);
-			alert.setTitle("ERROR");
-			alert.setHeaderText("Invalid Password");
-			alert.setContentText("Your Password is incorrect, please try again ");
 
-			alert.showAndWait();
-
+		else if (rdbChFem.selectedProperty().get() == true) {
+			gender = rdbChFem.getText();
 		}
+
+		String pathPhoto = "";
+
+		MainWindow main = new MainWindow();
+		main.show();
+		this.close();
 
 	}
 
 
 }
+
+
+

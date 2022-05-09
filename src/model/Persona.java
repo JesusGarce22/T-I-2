@@ -145,6 +145,14 @@ public class Persona<T> implements Serializable {
 				+ "," + heith + "\n";
 	}
 	
-	
+	public void editPerson(Persona p,T name, T lastName, T country,T age,T heith,T photo) {
+		p.setName(name);
+		p.setAge(age);
+		p.setLastName(lastName);
+		p.setCountry(country);
+		p.setPhoto(photo);
+		p.setHeith(heith);
+		
+	}
 	
 }

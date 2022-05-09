@@ -1610,3 +1610,33 @@ KITTS,
 Emely"
 KITTS,11 MARCH 2018,"
 Perú (el),,26L50L47A37J,girl,4,1.86
+
+Addyson,"
+BRANDENBERGER,
+Addyson"
+BRANDENBERGER,19 OCTOBER 1988,"
+Sudáfrica,,45E36A35E41A,girl,34,1.81
+
+Jelani,"
+HORACE,
+Jelani"
+HORACE,16 APRIL 1986,"
+Djibouti,,12L15J41u29L,boy,36,1.65
+
+Kaitlyn,"
+DAY,
+Kaitlyn"
+DAY,4 APRIL 1996,"
+Malta,,9E38A7K11E,girl,26,1.99
+
+Georgene,"
+LANCIOTTI,
+Georgene"
+LANCIOTTI,16 FEBRUARY 1967,"
+Guinea,,35J19K25K4K,boy,55,1.76
+
+Jamarcus,"
+TETTLETON,
+Jamarcus"
+TETTLETON,9 JANUARY 2007,"
+Hungría,,43E35E42u46L,girl,15,1.95

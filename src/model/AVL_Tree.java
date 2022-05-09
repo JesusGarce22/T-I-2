@@ -1,13 +1,14 @@
 package model;
 
 
+import java.util.ArrayList;
 import java.util.Comparator;
 
 public class AVL_Tree<T> {
 
 	public static AVL_Tree instance;
 	private Node root;
-
+	private ArrayList<Node> conten=new ArrayList<Node>();
 	private Node n;
 
 	public static AVL_Tree getInstance() {
@@ -18,7 +19,7 @@ public class AVL_Tree<T> {
 
 		return instance;
 	}
-	
+
 	public void clearTree() {
 
 		root = null;
@@ -48,6 +49,7 @@ public class AVL_Tree<T> {
 	public String triggerSearch(String key) {
 
 		Node n = search(root, key);
+		nodeForEdit(n);
 
 		String message = "";
 
@@ -65,16 +67,16 @@ public class AVL_Tree<T> {
 	}
 
 	public Node search(Node node, String key) {
-		
-		
+
+
 		if (node == null) {
 
 			return null;
 
 		}
-		
+
 		int aux = key.compareTo(node.getKey());
-		
+
 		if (node.getKey().equalsIgnoreCase(key)) {
 
 			return node;
@@ -121,7 +123,7 @@ public class AVL_Tree<T> {
 	public Node delete(Node current, String key) {
 
 		int aux = key.compareTo(current.getKey());
-		
+
 		if (current.getKey().equalsIgnoreCase(key)) {
 
 			if (current.getLeft() == null && current.getRight() == null) {
@@ -218,11 +220,11 @@ public class AVL_Tree<T> {
 	}
 
 	public Node insert(Node current, String key, T value) {
-		
+
 		if (current == null) {
 			return (new Node(key, value));
 		}
-		
+
 		int aux = key.compareTo(current.getKey());
 		if (aux < 0) {
 
@@ -244,8 +246,8 @@ public class AVL_Tree<T> {
 		int fe = getFe(current);
 
 		// Rotacion simple a la derecha
-		
-		
+
+
 
 		if (fe > 1 && (key.compareTo(current.getLeft().getKey())) < 0 ) {
 
@@ -326,5 +328,17 @@ public class AVL_Tree<T> {
 
 	public Node getTree() {
 		return root;
+	}
+
+	public Node nodeForEdit(Node n) {
+		
+		conten.add(n);
+		for(int i=0;i<conten.size();i++) {
+			if(conten.get(i)!=null) {
+				return conten.get(i);
+			}
+		}
+		return null;
+
 	}
 }
