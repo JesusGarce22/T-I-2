@@ -67,7 +67,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="boxChNacionality" layoutX="171.0" layoutY="218.0" prefWidth="150.0" />
+      <TextField fx:id="tfChNacionality" layoutX="171.0" layoutY="218.0" prefWidth="150.0" />
       <Button fx:id="btnCancel" layoutX="511.0" layoutY="348.0" mnemonicParsing="false" text="Cancelar" />
       <Button fx:id="btnUpload" layoutX="440.0" layoutY="348.0" mnemonicParsing="false" text="Subir" />
    </children>

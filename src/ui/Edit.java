@@ -47,7 +47,7 @@ public class Edit extends Stage{
 			String code=istance.triggerSearch(codeChange.getText());
 			Node x=istance.nodeForEdit(null);
 			if(code.equalsIgnoreCase(x.getValue().toString())) {
-				EditPerson edit = new EditPerson((Persona) x.getValue());
+				EditPerson edit = new EditPerson(codeChange.getText());
 				edit.show();
 				this.close();
 			}
