@@ -1611,6 +1611,7 @@ Emely"
 KITTS,11 MARCH 2018,"
 Perú (el),,26L50L47A37J,girl,4,1.86
 
+<<<<<<< HEAD
 Addyson,"
 BRANDENBERGER,
 Addyson"
@@ -1640,3 +1641,16 @@ TETTLETON,
 Jamarcus"
 TETTLETON,9 JANUARY 2007,"
 Hungría,,43E35E42u46L,girl,15,1.95
+=======
+Agusta,"
+JELINSKI,
+Agusta"
+JELINSKI,28 DECEMBER 1993,"
+Rumania,,12K46K7L48L,boy,29,1.98
+
+Beatrice,"
+KAHNG,
+Beatrice"
+KAHNG,21 FEBRUARY 1999,"
+República Popular Democrática de Corea (la),,47K27E33L49A,girl,23,1.94
+>>>>>>> 829c18aebc2728f42b9254c36b63ae16fed5b5ce
